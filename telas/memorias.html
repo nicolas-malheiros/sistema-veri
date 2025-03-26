@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memórias</title>
+    <link rel="stylesheet" href="../css/style-memorias.css">
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()">
+            <img src="../img/voltar-pagina.png" alt="Voltar" class="voltar-img" width="70px" height="60px">
+        </a>
+
+        <h1>Memórias com Você - Todo Tipo de foto que tirei</h1>
+        <p>Essas são algumas das fotos que tiramos quando estávamos juntos. Você também pode adicionar alguma foto aqui!</p>
+
+        <!-- Exibindo as fotos já adicionadas manualmente -->
+        <div class="foto-gallery" id="fotoGallery">
+            <!-- Fotos adicionadas manualmente -->
+            <div class="foto-item">
+                <img src="../img/fotosMemorias/foto1.jpg" alt="Foto Manual 1">
+            </div>
+            <div class="foto-item">
+                <img src="../img/fotosMemorias/foto2.jpg" alt="Foto Manual 2">
+            </div>
+            <div class="foto-item">
+                <img src="../img/fotosMemorias/foto3.jpg" alt="Foto Manual 3">
+            </div>
+            <!-- As fotos manualmente adicionadas vão aqui -->
+        </div>
+
+        <!-- Formulário para enviar uma nova foto -->
+        <div class="upload-form">
+            <h2>Envie Sua Foto</h2>
+            <form id="uploadForm">
+                <input type="file" id="fotoInput" accept="image/*" />
+                <button type="submit">Enviar Foto</button>
+            </form>
+        </div>
+
+        <!-- Fotos adicionadas dinamicamente -->
+        <div class="added-photos">
+            <h2>Fotos Adicionadas:</h2>
+            <div class="foto-gallery" id="addedPhotos">
+                <!-- Fotos enviadas pelo usuário serão exibidas aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Seleciona o formulário e a área de fotos
+        const uploadForm = document.getElementById('uploadForm');
+        const fotoInput = document.getElementById('fotoInput');
+        const addedPhotosContainer = document.getElementById('addedPhotos');
+        const fotoGallery = document.getElementById('fotoGallery');
+
+        // Carregar fotos do localStorage ao carregar a página
+        function loadPhotos() {
+            // Verifica se há fotos armazenadas no localStorage
+            const storedPhotos = JSON.parse(localStorage.getItem('fotos')) || [];
+
+            // Exibe as fotos armazenadas no localStorage (não sobrescreve fotos manuais)
+            storedPhotos.forEach(fotoData => {
+                const fotoItem = document.createElement('div');
+                fotoItem.classList.add('foto-item');
+                const img = document.createElement('img');
+                img.src = fotoData;  // Foto armazenada em base64
+                fotoItem.appendChild(img);
+                addedPhotosContainer.appendChild(fotoItem);  // Adiciona na galeria de fotos enviadas
+            });
+        }
+
+        // Chama a função para carregar as fotos ao iniciar a página
+        loadPhotos();
+
+        // Evento de envio do formulário
+        uploadForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o envio do formulário
+
+            const file = fotoInput.files[0]; // Pega o arquivo de foto selecionado
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    // Cria um novo elemento de imagem para a foto adicionada
+                    const img = document.createElement('img');
+                    img.src = event.target.result; // Foto convertida para base64
+                    img.alt = 'Foto adicionada';
+                    img.classList.add('added-foto');
+
+                    // Exibe a imagem na galeria de fotos enviadas
+                    addedPhotosContainer.appendChild(img);
+
+                    // Armazena a foto no localStorage
+                    const storedPhotos = JSON.parse(localStorage.getItem('fotos')) || [];
+                    storedPhotos.push(event.target.result); // Adiciona a foto ao array
+                    localStorage.setItem('fotos', JSON.stringify(storedPhotos)); // Atualiza o localStorage
+                };
+
+                reader.readAsDataURL(file); // Lê o arquivo como uma URL base64
+            } else {
+                alert('Por favor, selecione uma foto para enviar!');
+            }
+
+            // Limpa o campo de entrada
+            fotoInput.value = '';
+        });
+    </script>
+</body>
+</html>

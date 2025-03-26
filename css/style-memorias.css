@@ -1,0 +1,106 @@
+/* Estilos para a imagem de voltar */
+.voltar-img {
+    position: fixed; /* Fixar a imagem no canto */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    cursor: pointer; /* Mostrar um cursor de pointer ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de animação quando o mouse passa sobre a imagem */
+.voltar-img:hover {
+    transform: rotate(360deg) scale(1.1); /* Rotaciona e aumenta a imagem */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+/* Outros estilos podem ser mantidos */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4eccb1, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 1vh;
+}
+
+/* Container principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    color: #8d93e7;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Galeria de Fotos */
+.foto-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.foto-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Formulário de Upload */
+.upload-form {
+    margin-bottom: 40px;
+}
+
+#fotoInput {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+/* Fotos Adicionadas */
+.added-photos {
+    margin-top: 40px;
+}
+
+.added-foto {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
