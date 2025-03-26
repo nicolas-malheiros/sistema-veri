@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Opções</title>
+    <link rel="stylesheet" href="../css/style-menu.css">
+    <script src="../js/script-menu.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Bem-vinda, <span id="userName"></span>!</h1>
+            <p class="mensagem-engracada">Aqui é o menu, você sabe não sou muito criativo e nem bom com designer de site
+                <br>
+                Mas vai ta bonitinho!! KKKKKK
+            </p>
+        </div>
+
+        <div class="menu">
+            <div class="menu-item" onclick="goToPage('pagina1')">
+                <img src="../img/memorias-icone.png" alt="Memórias">
+                <p>Memórias</p>
+            </div>
+            <div class="menu-item" onclick="goToPage('pagina2')">
+                <img src="../img/perguntas-icone.png" alt="Memórias">
+                <p>Perguntas e Respostas</p>
+            </div>
+            <div class="menu-item" onclick="goToPage('pagina3')">
+                <img src="../img/musica-icone.png" alt="Memórias">
+                <p>Playlist</p>
+            </div>
+            <div class="menu-item" onclick="goToPage('pagina4')">
+                <img src="../img/instrumento-icone.png" alt="Memórias">
+                <p>Instrumento</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Pega o nome da URL (passado pela query string)
+        let urlParams = new URLSearchParams(window.location.search);
+        let userName = urlParams.get('name');
+
+        // Exibe o nome no "Bem-vindo"
+        if (userName) {
+            document.getElementById('userName').textContent = decodeURIComponent(userName);
+        } else {
+            document.getElementById('userName').textContent = "Visitante";
+        }
+
+        // Função para redirecionar para diferentes páginas (para cada imagem)
+        function goToPage(page) {
+            window.location.href = `${page}.html`; // Ou coloque a URL completa para as páginas
+        }
+    </script>
+</body>
+</html>
