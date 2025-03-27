@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Filmes Selecionados</title>
+        <link rel="stylesheet" href="../css/style-filme.css">
+        <script src="../js/script-movies.js" defer></script>
+    </head>
+    <body>
+
+        <a href="javascript:history.back()">
+            <img src="../img/voltar-pagina.png" alt="Voltar" class="voltar-img" width="70px" height="60px">
+        </a>
+
+        <div class="container">
+            <div class="mensagem-usuario">
+                <h3>Veridiana Maria, filmes aí para por para depois assistir</h3>
+                <p> exemplos de filmes: before sunrise, endless love, whiplash e assim vai!</p>
+            </div>
+            <header>
+                <h1>Filmes Selecionados</h1>
+            </header>
+            
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Digite o nome de um filme...">
+                <button onclick="searchMovies()">Buscar</button> <!-- Corrigido para searchMovies() -->
+            </div>
+        
+            
+            <div class="selected-movies">
+                <!-- Lista de filmes selecionados será carregada aqui -->
+                <div id="search-results" class="search-results"></div>
+            </div>
+
+            <div id="favorite-movies">
+                <!-- Os filmes favoritos serão carregados aqui -->
+            </div>
+        </div>
+    </body>
+</html>
