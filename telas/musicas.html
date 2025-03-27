@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="../css/style-musicas.css">
+  <script src="../js/script-musicas.js" defer></script>
+</head>
+<body>
+
+    <a href="javascript:history.back()">
+        <img src="../img/voltar-pagina.png" alt="Voltar" class="voltar-img" width="70px" height="60px">
+    </a>
+
+  <div class="music-container">
+    <h3 class="mensagemUsuario" style="text-align: center; margin-bottom: 30px; font-style: italic; color: rgb(92, 202, 202);">Fiz isso para colocar musicas que lembre ou quer escutar depois, uma boa né 
+        veri!
+    </h3>
+    <div class="selected-songs">
+      <h2>Suas Músicas</h2>
+
+    </div>
+
+    <!-- Seção para pesquisar novas músicas -->
+    <div class="search-songs">
+      <h2>Pesquisar Músicas</h2>
+      <input type="text" id="search-bar" placeholder="Busque uma música...">
+      <button onclick="searchMusic()">Buscar</button>
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+</body>
+</html>

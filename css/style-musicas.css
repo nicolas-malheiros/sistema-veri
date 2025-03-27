@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #d3d3d4, #63f07a);
+
+  }
+  
+  .music-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .selected-songs, .search-songs {
+    margin-bottom: 30px;
+  }
+  
+  .song {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .song img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  #search-bar {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+  
+  button {
+    padding: 20px 30px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1ed760;
+  }
+  
+  #search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .search-result {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .search-result img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .search-result p {
+    margin-top: 10px;
+  }
+
+  .voltar-img {
+    position: fixed; /* Fixar a imagem no canto */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    cursor: pointer; /* Mostrar um cursor de pointer ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de animação quando o mouse passa sobre a imagem */
+.voltar-img:hover {
+    transform: rotate(360deg) scale(1.1); /* Rotaciona e aumenta a imagem */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+  
