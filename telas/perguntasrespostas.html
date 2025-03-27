@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas e Respostas</title>
+  <link rel="stylesheet" href="../css/style-perguntas.css">
+  <script src="../js/script-perguntas.js" defer></script>
+</head>
+<body>
+
+    <a href="javascript:history.back()">
+        <img src="../img/voltar-pagina.png" alt="Voltar" class="voltar-img" width="70px" height="60px">
+    </a>
+
+    <div class="container">
+        <header>
+          <h1>Perguntas e Respostas</h1>
+        </header>
+    
+        <section class="qa-section">
+          <h2>Perguntas pré-existentes</h2>
+          <div id="pre-existing-questions">
+            <!-- Perguntas pré-existentes aparecerão aqui -->
+          </div>
+    
+          <h2>Adicionar nova pergunta</h2>
+          <input type="text" id="new-question" placeholder="Digite sua nova pergunta aqui...">
+          <button onclick="addNewQuestion()">Adicionar Pergunta</button>
+    
+          <h2>Perguntas adicionadas</h2>
+          <div id="added-questions">
+            <!-- Perguntas adicionadas pelo usuário aparecerão aqui -->
+          </div>
+        </section>
+      </div>
+
+</body>
+</html>

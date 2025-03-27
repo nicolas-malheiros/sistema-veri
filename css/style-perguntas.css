@@ -1,0 +1,132 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #60bbc7, #cc4545);
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .qa-section {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  #pre-existing-questions, #added-questions {
+    margin-top: 20px;
+  }
+  
+  .question {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .question button {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Estilo da resposta */
+  .answer {
+    background-color: #f1f1f1;
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 5px solid #e74c3c;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .responder{
+    background-color: rgb(76, 143, 230);
+  }
+
+  .responder:hover{
+    background-color: rgb(71, 207, 241);
+  }
+
+  .limpar:hover{
+    background-color: #333;
+    color: rgb(196, 181, 181);
+  }
+
+  .limpar{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid black;
+  }
+
+   .voltar-img {
+    position: fixed; /* Fixar a imagem no canto */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    cursor: pointer; /* Mostrar um cursor de pointer ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de animação quando o mouse passa sobre a imagem */
+.voltar-img:hover {
+    transform: rotate(360deg) scale(1.1); /* Rotaciona e aumenta a imagem */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
