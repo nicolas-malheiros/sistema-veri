@@ -53,3 +53,48 @@ button {
 button:hover {
     background-color: #ce4747;
 }
+
+/* Media Query para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Torna a container mais estreita em telas pequenas */
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Ajuste o tamanho da fonte do título */
+        margin-bottom: 20px; /* Menos margem para telas menores */
+    }
+
+    input {
+        padding: 20px; /* Reduz o padding do input */
+        font-size: 1.1rem; /* Ajuste o tamanho da fonte do input */
+    }
+
+    button {
+        padding: 15px 25px; /* Reduz o padding do botão */
+        font-size: 0.9rem; /* Ajuste o tamanho da fonte do botão */
+    }
+}
+
+/* Media Query para telas menores que 480px (celulares muito pequenos) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Container mais estreita em telas muito pequenas */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajuste maior no título para telas muito pequenas */
+    }
+
+    input {
+        padding: 15px; /* Menos padding nos inputs */
+        font-size: 1rem; /* Fontes menores nos inputs */
+    }
+
+    button {
+        padding: 12px 20px; /* Botão menor em telas muito pequenas */
+        font-size: 0.8rem; /* Fonte do botão menor */
+    }
+}

@@ -6,9 +6,10 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  /* Alinha verticalmente no centro */
     height: 100vh;
     background: linear-gradient(135deg, #ecf1f7, #63b0f0);
+    overflow-y: auto;
 }
 
 .container {
@@ -65,6 +66,7 @@ body {
     border-radius: 10px;
 }
 
+/* Ajuste da fonte nos itens do menu */
 .menu-item p {
     margin-top: 10px;
     font-size: 1rem;
@@ -73,14 +75,67 @@ body {
 }
 
 /* Responsividade para telas menores */
+
+/* Para telas de tablet (menor que 768px) */
 @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin-top: 40px; /* Mais espaço no topo para o tablet */
+    }
+
+    .welcome-message h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-message{
+        display: none;
+    }
+
+    .welcome-message p {
+        font-size: 1rem;
+    }
+
     .menu {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);  /* Ajusta o menu para 2 colunas */
+    }
+
+    .menu-item {
+        padding: 15px;
+    }
+
+    .menu-item img {
+        max-height: 150px;
+        object-fit: cover; /* Ajuste para evitar distorções na imagem */
     }
 }
 
+/* Para telas de celular (menor que 480px) */
 @media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+        margin-top: 50px; /* Mais espaço no topo para o celular */
+    }
+
+    .welcome-message h1 {
+        font-size: 1.6rem;
+    }
+
+    .welcome-message p {
+        font-size: 0.9rem;
+    }
+
     .menu {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* Ajusta o menu para 1 coluna */
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+
+    .menu-item img {
+        max-height: 120px;
+        object-fit: cover; /* Ajuste para evitar distorções na imagem */
     }
 }
