@@ -81,7 +81,7 @@ body {
     .container {
         width: 90%;
         padding: 20px;
-        margin-top: 40px; /* Mais espaço no topo para o tablet */
+        margin-top: 50px; /* Mais espaço no topo para o tablet */
     }
 
     .welcome-message h1 {
@@ -115,7 +115,7 @@ body {
     .container {
         width: 95%;
         padding: 10px;
-        margin-top: 50px; /* Mais espaço no topo para o celular */
+        margin-top: 500px; /* Mais espaço no topo para o celular */
     }
 
     .welcome-message h1 {
