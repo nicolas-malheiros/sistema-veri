@@ -1,5 +1,5 @@
-const CLIENT_ID = '17e3d3d855e34858a3c2fc50630f6ab3';  // Coloque seu Client ID
-const CLIENT_SECRET = 'e365a28b00294e6d99ba1f112a706cac';  // Coloque seu Client Secret
+const CLIENT_ID = 'c9c585464ef74c43bd7eada52e417391';  // Coloque seu Client ID
+const CLIENT_SECRET = 'ea6f39b09ed8428fa28a14a8a5035716';  // Coloque seu Client Secret
 const REDIRECT_URI = 'https://nicolas-malheiros.github.io/sistema-veri/telas/musicas.html';  // Seu Redirect URI
 const mensagemInteracao = document.querySelector('.mensagemUsuario');
 
